@@ -1,0 +1,33 @@
+Source: node-bindings
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Xavier Guimard <yadd@debian.org>
+Testsuite: autopkgtest-pkg-nodejs
+Build-Depends: debhelper-compat (= 12)
+ , pkg-js-tools (>= 0.9.20~)
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-bindings
+Vcs-Git: https://salsa.debian.org/js-team/node-bindings.git
+Homepage: https://github.com/TooTallNate/node-bindings
+Rules-Requires-Root: no
+
+Package: node-bindings
+Architecture: all
+Depends: ${misc:Depends}
+ , nodejs
+Description: resolve path to c++ addons built by node-gyp - Node.js module
+ Throughout the course of Node.js's native addon history, addons have ended up
+ being compiled in a variety of different places, depending on which build tool
+ and which version of Node.js was used. In addition, the gyp build tool can
+ produce either a Release or Debug build, each being built into different
+ locations.
+ .
+ This module checks all the possible locations that a native addon would be
+ built at, and returns the first one that loads successfully.
+ .
+ In Debian, addons are always built in the same place - in the Release
+ directory. This module allows upstream code to remain unchanged regardless of
+ the environment it is built in.
+ .
+ Node.js is an event-based server-side JavaScript engine.

@@ -1,0 +1,31 @@
+node-bindings (1.5.0-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Bump debhelper from deprecated 8 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Change priority extra to priority optional.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Remove unnecessary XS-Testsuite field in debian/control.
+  * Update Vcs-* headers to use salsa repository.
+
+  [ Xavier Guimard ]
+  * Declare compliance with policy 4.5.0
+  * Use pkg-js-tools auto install
+  * Add "Rules-Requires-Root: no"
+  * Change section to javascript
+  * Add debian/gbp.conf
+  * Replace Andrew Kelley by myself in uploaders list. Thanks for your work!
+    (Closes: #909901)
+  * Embed component: file-uri-to-path
+  * New upstream version 1.5.0
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 27 Apr 2020 09:34:26 +0200
+
+node-bindings (1.2.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #753051)
+
+ -- Andrew Kelley <superjoe30@gmail.com>  Thu, 10 Jul 2014 00:39:16 +0200

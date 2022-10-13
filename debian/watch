@@ -1,0 +1,11 @@
+version=3
+opts=\
+dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-bindings-$1.tar.gz/ \
+ https://github.com/TooTallNate/node-bindings/tags .*/archive/v?([\d\.]+).tar.gz
+
+opts=\
+component=file-uri-to-path,\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-file-uri-to-path-$1.tar.gz/ \
+ https://github.com/TooTallNate/file-uri-to-path/tags .*/archive/v?(1[\d\.]+).tar.gz ignore
